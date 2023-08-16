@@ -75,7 +75,7 @@ function App() {
         return;
       }
 
-      const response = await axios.get(`http://localhost:8080/calculatePacks/${itemsNumber}`);
+      const response = await axios.get(`https://packingchallenge-production.up.railway.app/calculatePacks/${itemsNumber}`);
       setResult(response.data);
     } catch (error) {
       console.error('Error:', error);
