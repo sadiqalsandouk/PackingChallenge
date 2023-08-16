@@ -22,7 +22,7 @@ func main() {
 	r.HandleFunc("/calculatePacks/{items}", calculatePacksHandler).Methods("GET")
 
 	http.Handle("/", r)
-	fmt.Println("Server listening on :8080")
+	fmt.Println("Server listening")
 
 	port := os.Getenv("PORT")
 	if port == "" {
