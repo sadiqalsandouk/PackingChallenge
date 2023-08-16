@@ -23,7 +23,12 @@ func main() {
 
 	http.Handle("/", r)
 	fmt.Println("Server listening on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, nil))
 }
 
 func calculatePacksHandler(w http.ResponseWriter, r *http.Request) {
