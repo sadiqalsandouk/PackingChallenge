@@ -84,8 +84,8 @@ function App() {
 
   return (
     <Container>
-      <GymsharkTitle>🦈 Gymshark 🦈</GymsharkTitle>
-      <Title>🖩 Pack Calculator 🖩</Title>
+      <GymsharkTitle>🦈Gymshark🦈</GymsharkTitle>
+      <Title>Pack Calculator</Title>
       <Input
         value={items}
         onChange={(e) => setItems(e.target.value)}
