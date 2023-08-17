@@ -15,7 +15,7 @@ const Title = styled.h1`
 `;
 
 const GymsharkTitle = styled.h1`
-font-size: 75px;
+font-size: 40px;
 `;
 
 const Input = styled.input`
@@ -84,7 +84,7 @@ function App() {
 
   return (
     <Container>
-      <GymsharkTitle>🦈Gymshark🦈</GymsharkTitle>
+      <GymsharkTitle>Gymshark🦈</GymsharkTitle>
       <Title>Pack Calculator</Title>
       <Input
         value={items}
