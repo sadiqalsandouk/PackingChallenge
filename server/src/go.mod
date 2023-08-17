@@ -5,10 +5,16 @@ go 1.21
 require github.com/gin-gonic/gin v1.9.1
 
 require (
+	github.com/felixge/httpsnoop v1.0.1 // indirect
+	github.com/gorilla/handlers v1.5.1 // indirect
+)
+
+require (
 	github.com/bytedance/sonic v1.10.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
 	github.com/chenzhuoyu/iasm v0.9.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
+	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect

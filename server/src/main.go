@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -19,6 +20,12 @@ type Config struct {
 
 func main() {
 	r := mux.NewRouter()
+	corsHandler := handlers.CORS(
+		handlers.AllowedOrigins([]string{"http://localhost:5173", "https://gymsharkpackingcalculcator.netlify.app"}),
+		handlers.AllowedMethods([]string{"GET", "HEAD", "OPTIONS", "POST"}),
+		handlers.AllowedHeaders([]string{"Content-Type"}),
+	)
+	r.Use(corsHandler)
 	r.HandleFunc("/calculatePacks/{items}", calculatePacksHandler).Methods("GET")
 
 	http.Handle("/", r)
